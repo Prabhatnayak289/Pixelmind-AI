@@ -431,7 +431,7 @@ footer{background:${p.palette.primary === '#f5f0eb' || p.palette.primary === '#f
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© ${new Date().getFullYear()} ${name}. All rights reserved.</div>
-    <div class="footer-copy">Built with PixelMind AI</div>
+    <div class="footer-copy">Built with WebClaw</div>
   </div>
 </footer>
 
