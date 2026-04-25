@@ -309,7 +309,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
       <div class="demo-inputs">
         <div class="inp-group">
           <label class="inp-label">Business Type</label>
-          <select id="bizType">
+          <select id="bizType" onchange="onBizTypeChange()">
             <option value="dental clinic">🦷 Dental Clinic</option>
             <option value="law firm">⚖️ Law Firm</option>
             <option value="fitness coach">💪 Fitness Coach</option>
@@ -324,12 +324,12 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
         </div>
         <div class="inp-group">
           <label class="inp-label">Business Name</label>
-          <input type="text" id="bizName" placeholder="e.g. SmileCare Dental" value="SmileCare Dental">
+          <input type="text" id="bizName" placeholder="Auto-filled when you pick a category" id="bizName" value="SmileCare Dental Clinic">
         </div>
       </div>
       <div class="inp-group">
         <label class="inp-label">What makes you special? (optional)</label>
-        <textarea id="bizDesc" placeholder="e.g. 15 years experience, Sunday appointments, EMI available…">Painless treatments, 15 years experience, affordable EMI, open Sundays.</textarea>
+        <textarea id="bizDesc" placeholder="e.g. 15 years experience, Sunday appointments, EMI available…">Painless treatments, 15 years experience, CBCT 3D imaging, affordable EMI from ₹999/month, open Sundays.</textarea>
       </div>
       <button class="gen-btn" id="genBtn" onclick="generateWebsite()">
         <div class="spinner" id="spinner"></div>
@@ -566,6 +566,28 @@ async function generateWebsite() {
     btn.disabled = false;
     btnText.style.display = 'inline';
     spinner.style.display = 'none';
+  }
+}
+
+// Auto-fill name & description when dropdown changes
+const autoFill = {
+  "dental clinic":     { name: "SmileCare Dental Clinic",       desc: "Painless treatments, 15 years experience, CBCT 3D imaging, affordable EMI from ₹999/month, open Sundays." },
+  "law firm":          { name: "Sharma & Associates Law Firm",   desc: "20+ years practice, 2000+ cases won, free 30-min consultation, available 24/7 for emergencies." },
+  "fitness coach":     { name: "FitLife Transformation Studio",  desc: "500+ transformations, NSCA certified coaches, nutrition plans included, 7-day free trial available." },
+  "restaurant":        { name: "The Grand Spice Kitchen",        desc: "Award-winning chefs, farm-to-table ingredients, private dining for 200 guests, open since 2010." },
+  "software agency":   { name: "CodeCraft Digital Agency",       desc: "Full-stack development, AI/ML integration, 200+ projects delivered, 2-week sprint delivery." },
+  "real estate agency":{ name: "Prime Spaces Realty",            desc: "₹500Cr+ properties sold, free valuation, NRI services, home loan assistance included." },
+  "yoga studio":       { name: "Serenity Yoga & Wellness",       desc: "RYT-500 certified instructors, AC studio, hot yoga room, meditation & pranayama, first class free." },
+  "photography studio":{ name: "Lens & Light Photography",       desc: "1000+ weddings, Sony A1 & Canon R5, edited photos in 7 days, free pre-wedding shoot included." },
+  "coaching institute":{ name: "Apex Academy",                   desc: "5000+ selections in IIT/NEET/UPSC, IIT alumni faculty, scholarship up to 90%, free demo class." },
+  "beauty salon":      { name: "Glamour & Grace Beauty Studio",  desc: "Celebrity makeup artists, 100% authentic products, bridal specialist, 10000+ happy clients." }
+};
+function onBizTypeChange() {
+  const type = document.getElementById('bizType').value;
+  const fill = autoFill[type];
+  if (fill) {
+    document.getElementById('bizName').value = fill.name;
+    document.getElementById('bizDesc').value = fill.desc;
   }
 }
 </script>
