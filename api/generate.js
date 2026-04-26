@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       whyUs: [["🦷","Painless Treatment","Advanced sedation techniques ensure a completely comfortable experience"],["🔬","Latest Technology","CBCT 3D imaging, laser dentistry, and digital X-rays for precision care"],["👨‍⚕️","Expert Doctors","BDS & MDS qualified specialists with decades of combined experience"],["💳","Flexible EMI","No-cost EMI options starting ₹999/month. All insurance accepted"]],
       testimonials: [["Rahul Sharma","Dental Implants","⭐⭐⭐⭐⭐","The implants look and feel completely natural. Best decision of my life!"],["Priya Nair","Teeth Whitening","⭐⭐⭐⭐⭐","My teeth are 8 shades whiter in just one session. Absolutely magical results!"],["Arjun Das","Braces Treatment","⭐⭐⭐⭐⭐","Professional team, painless process. My confidence has completely transformed."]],
       cta: "Book Free Consultation",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "🎁 FREE Dental Check-up + X-Ray worth ₹800 — This Month Only!"
     },
     "law firm": {
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
       whyUs: [["⚖️","Proven Track Record","Over 2000 successful cases across High Courts and Supreme Court of India"],["🏛️","Expert Legal Team","Senior advocates with specialized expertise across all branches of law"],["🤝","Client-First Approach","Transparent communication, regular updates, and honest legal advice always"],["📞","24/7 Availability","Emergency legal assistance available round the clock. We're always there."]],
       testimonials: [["Vikram Mehta","Property Dispute","⭐⭐⭐⭐⭐","Won a 5-year property case in just 8 months. Outstanding legal strategy!"],["Sunita Rao","Divorce Settlement","⭐⭐⭐⭐⭐","Compassionate, professional, and thorough. Got the best possible outcome."],["TechCorp Ltd","Corporate Matter","⭐⭐⭐⭐⭐","Their corporate legal team saved us ₹2 crore in a contract dispute. Exceptional!"]],
       cta: "Get Free Consultation",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "⚖️ FREE 30-Minute Legal Consultation — No Obligation, Complete Confidentiality"
     },
     "fitness coach": {
@@ -49,7 +49,7 @@ export default async function handler(req, res) {
       whyUs: [["🔥","Proven Programs","Customized training plans backed by sports science and nutrition research"],["📊","Progress Tracking","Weekly body composition analysis, fitness assessments, and goal adjustments"],["🥗","Nutrition Guidance","Personalized meal plans, macro tracking, and supplement guidance included"],["💪","Certified Expertise","NSCA, ACE, and ISSA certified coaches with competition experience"]],
       testimonials: [["Ananya Singh","Weight Loss","⭐⭐⭐⭐⭐","Lost 18kg in 4 months! The nutrition plan + training combo is unbeatable."],["Rohit Kumar","Muscle Gain","⭐⭐⭐⭐⭐","Gained 8kg of lean muscle in 3 months. The results speak for themselves!"],["Meera Patel","Overall Fitness","⭐⭐⭐⭐⭐","From barely walking to running a 10K. This coach changed my entire life."]],
       cta: "Start Free Trial",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "🔥 FREE 7-Day Trial + Body Composition Analysis worth ₹2000!"
     },
     "restaurant": {
@@ -62,7 +62,7 @@ export default async function handler(req, res) {
       whyUs: [["👨‍🍳","Master Chefs","Award-winning chefs trained in 5-star hotels across India and abroad"],["🌿","Fresh Ingredients","Farm-to-table philosophy with locally sourced organic produce daily"],["🏆","Award Winning","Best Restaurant award by Times Food Guide 3 years in a row"],["🎉","Private Events","Fully customizable private dining for up to 200 guests with dedicated host"]],
       testimonials: [["Deepa Krishnan","Anniversary Dinner","⭐⭐⭐⭐⭐","The ambiance, food, and service were absolutely magical. A night to remember!"],["Suresh Iyer","Corporate Event","⭐⭐⭐⭐⭐","Hosted our company dinner here. Every single guest was thoroughly impressed!"],["Neha Gupta","Birthday Party","⭐⭐⭐⭐⭐","The birthday cake and personalised menu were beyond our expectations. Fantastic!"]],
       cta: "Reserve a Table",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "🍽️ Book a Table Today & Get Complimentary Dessert for the Table!"
     },
     "software agency": {
@@ -75,7 +75,7 @@ export default async function handler(req, res) {
       whyUs: [["🚀","Agile Delivery","2-week sprints with daily standups, transparent progress, and on-time delivery guaranteed"],["🔒","Enterprise Security","ISO 27001 compliant development with end-to-end encryption and security audits"],["📱","Cross-Platform","React, Flutter, Node.js, Python, AWS — we master every modern tech stack"],["🤖","AI-First Approach","Integrating GPT-4, computer vision, and ML models into real business applications"]],
       testimonials: [["Kiran Patel, CTO","SaaS Platform","⭐⭐⭐⭐⭐","Delivered a complex SaaS product in 3 months. Code quality is outstanding!"],["Riya Shah, CEO","Mobile App","⭐⭐⭐⭐⭐","Our app hit 100K downloads in the first month. Brilliant UX and rock-solid backend!"],["Dev Sharma, Founder","E-Commerce","⭐⭐⭐⭐⭐","Sales increased 400% after their redesign. Best tech investment we ever made."]],
       cta: "Get Free Estimate",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "💻 FREE Technical Consultation + Project Roadmap worth ₹10,000!"
     },
     "real estate agency": {
@@ -88,7 +88,7 @@ export default async function handler(req, res) {
       whyUs: [["🏠","Exclusive Listings","Access to pre-launch and off-market properties before they hit the market"],["📊","Market Intelligence","Real-time price analytics, area growth trends, and investment ROI projections"],["🤝","End-to-End Support","Legal verification, home loans, interior design, and moving assistance included"],["🏆","Award-Winning","Best Real Estate Agency award by CREDAI Bengal for 3 consecutive years"]],
       testimonials: [["Amit Banerjee","3BHK in Newtown","⭐⭐⭐⭐⭐","Found our perfect home in just 2 weeks. The team handled everything seamlessly!"],["Shreya Chatterjee","Commercial Office","⭐⭐⭐⭐⭐","Got 18% ROI on our commercial investment in the first year. Brilliant advice!"],["NRI Client, Dubai","Investment Property","⭐⭐⭐⭐⭐","Handled everything remotely. Transparent process, no surprises. Highly trusted!"]],
       cta: "Schedule Free Visit",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "🏠 FREE Property Valuation + Investment Advisory Session — Limited Slots!"
     },
     "yoga studio": {
@@ -101,7 +101,7 @@ export default async function handler(req, res) {
       whyUs: [["🧘","Certified Instructors","RYT-500 certified teachers trained in Rishikesh with 10+ years experience"],["🌿","Holistic Approach","Yoga, pranayama, meditation, Ayurveda nutrition and lifestyle coaching combined"],["🏛️","Premium Studio","AC studio with natural lighting, premium mats, props, and spa-like changing rooms"],["👨‍👩‍👧","All Levels Welcome","Separate beginner, intermediate, and advanced batches. Personal attention guaranteed"]],
       testimonials: [["Pooja Menon","6 Months Student","⭐⭐⭐⭐⭐","Chronic back pain gone in 2 months of practice. This studio literally healed me!"],["Rajesh Nair","Meditation Course","⭐⭐⭐⭐⭐","My anxiety levels dropped by 80%. The mindfulness techniques are life-changing."],["Kavitha Rao","Prenatal Yoga","⭐⭐⭐⭐⭐","The gentlest, most supportive prenatal classes. Had the most peaceful pregnancy!"]],
       cta: "Book Free Trial Class",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "🧘 FREE First Class + Yoga Starter Kit worth ₹1500 for New Students!"
     },
     "photography studio": {
@@ -114,7 +114,7 @@ export default async function handler(req, res) {
       whyUs: [["📸","Award-Winning","Featured in Vogue India, Times Wedding, and National Geographic Travel edition"],["🎬","Cinema-Grade Gear","Sony A1, Canon R5, Leica cameras with professional cinema lighting setups"],["🎨","Artistic Vision","Each photo is a work of art — we don't just document, we create visual poetry"],["💾","Quick Delivery","Edited photos delivered within 7 days. Wedding albums within 30 days, guaranteed"]],
       testimonials: [["Sneha & Arjun","Wedding","⭐⭐⭐⭐⭐","Every single photo looks like it's from a Bollywood film. Pure magic!"],["L'Oreal India","Product Shoot","⭐⭐⭐⭐⭐","Our most successful product campaign yet. The photography elevated our brand 10x!"],["Tata Consultancy","Corporate Event","⭐⭐⭐⭐⭐","Professional, unobtrusive, and the results were stunning. Will always use them!"]],
       cta: "Book Your Session",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "📸 FREE Pre-Wedding Shoot worth ₹15,000 with Every Wedding Package!"
     },
     "coaching institute": {
@@ -127,7 +127,7 @@ export default async function handler(req, res) {
       whyUs: [["📚","Expert Faculty","IIT/IIM alumni and retired IAS/IPS officers as guest faculty for real-world insights"],["📊","Smart Study System","AI-powered doubt clearing, adaptive tests, and personalized weekly progress reports"],["🏆","Proven Results","AIR 1 in NEET 2023, 3 IIT top-50 ranks, and 47 IAS selections in last 5 years"],["💰","Affordable Fees","Scholarships up to 90% for merit students. Easy EMI. No student left behind."]],
       testimonials: [["Aryan Gupta, AIR 47","IIT-JEE","⭐⭐⭐⭐⭐","The faculty here are exceptional. They teach concepts, not just formulas. Dream come true!"],["Priya Sharma, MBBS","NEET 2023","⭐⭐⭐⭐⭐","Scored 680/720 in NEET! The mock test series was exactly like the real exam."],["IAS Rohit Verma","UPSC 2022","⭐⭐⭐⭐⭐","The mentorship program is unmatched. Cleared UPSC in my first attempt thanks to them!"]],
       cta: "Enroll Now",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "🎓 FREE Demo Class + Scholarship Test — Win Up to 90% Fee Waiver!"
     },
     "beauty salon": {
@@ -140,7 +140,7 @@ export default async function handler(req, res) {
       whyUs: [["💄","Master Artists","Celebrity makeup artists trained at VLCC, Shahnaz Husain, and L'Oreal Academy"],["✨","Premium Products","100% authentic MAC, Kérastase, Schwarzkopf, and Forest Essentials products only"],["👰","Bridal Specialists","600+ brides transformed. Dedicated bridal suite with HD lighting and trial sessions"],["🌸","Hygiene First","Hospital-grade sterilization, disposable tools, and allergen-tested products guaranteed"]],
       testimonials: [["Ritika Singh","Bridal Makeup","⭐⭐⭐⭐⭐","Looked like an absolute queen on my wedding day! Every guest complimented my look."],["Tanvi Ghosh","Keratin Treatment","⭐⭐⭐⭐⭐","My frizzy hair is now silky smooth for the first time in my life. Absolutely love it!"],["Monika Roy","Nail Art","⭐⭐⭐⭐⭐","The nail designs are absolutely stunning. People keep asking where I got them done!"]],
       cta: "Book Appointment",
-      phone: "+91 98765 43210",
+      phone: "+91 93210 27740",
       offer: "💅 20% OFF on All Services for First-Time Visitors — Book Today!"
     }
   };
@@ -223,7 +223,7 @@ nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.25)}
 .offer-banner{background:${p.palette.accent};color:${p.palette.primary};text-align:center;padding:10px 20px;font-size:.85rem;font-weight:600;position:relative;z-index:999;margin-top:70px}
 
 /* HERO */
-.hero{min-height:92vh;background:linear-gradient(135deg, ${p.palette.primary} 0%, ${adjustColor(p.palette.primary)} 60%, ${p.palette.accent}22 100%);display:flex;align-items:center;padding:60px 5% 80px;position:relative;overflow:hidden}
+.hero{min-height:92vh;background:linear-gradient(135deg, ${p.palette.primary}ee 0%, ${adjustColor(p.palette.primary)}ee 60%, ${p.palette.accent}33 100%),url('${getImages(bizType).hero}') center/cover no-repeat;display:flex;align-items:center;padding:60px 5% 80px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-50%;right:-10%;width:700px;height:700px;background:radial-gradient(circle, ${p.palette.accent}20 0%, transparent 65%);border-radius:50%;animation:pulse 6s ease-in-out infinite}
 .hero::after{content:'';position:absolute;bottom:-20%;left:-5%;width:500px;height:500px;background:radial-gradient(circle, ${p.palette.highlight}15 0%, transparent 65%);border-radius:50%;animation:pulse 8s ease-in-out 2s infinite}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.15);opacity:1}}
@@ -389,6 +389,29 @@ footer{background:${p.palette.primary === '#f5f0eb' || p.palette.primary === '#f
   <div class="why-grid">${whyHTML}</div>
 </section>
 
+<section style="padding:70px 5%;background:${p.palette.light}">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:40px">
+      <span style="display:inline-block;background:${p.palette.accent}18;color:${p.palette.accent};padding:5px 16px;border-radius:50px;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:1px solid ${p.palette.accent}30">Our Work</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:900;color:${p.palette.text};margin-top:12px;letter-spacing:-.5px">See the Difference We Make</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px">
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.12);position:relative;aspect-ratio:4/3">
+        <img src="${getImages(bizType).hero}" alt="Our facility" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:white;font-size:.85rem;font-weight:600">Our Facility</div>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.12);position:relative;aspect-ratio:4/3">
+        <img src="${getImages(bizType).service}" alt="Our services" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:white;font-size:.85rem;font-weight:600">Our Services</div>
+      </div>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.12);position:relative;aspect-ratio:4/3">
+        <img src="${getImages(bizType).team}" alt="Our team" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:white;font-size:.85rem;font-weight:600">Our Team</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="testi-section" id="testimonials">
   <div class="section-header">
     <div class="section-tag">Client Reviews</div>
@@ -402,7 +425,7 @@ footer{background:${p.palette.primary === '#f5f0eb' || p.palette.primary === '#f
   <h2>Ready to Get Started?</h2>
   <p>Join thousands of satisfied clients who chose ${name}. Take the first step today — it's completely free.</p>
   <div class="cta-btns">
-    <a href="https://wa.me/919876543210?text=Hi! I want to book an appointment with ${encodeURIComponent(name)}" class="btn-primary" target="_blank">💬 WhatsApp Us Now</a>
+    <a href="https://wa.me/919321027740?text=Hi! I want to book an appointment with ${encodeURIComponent(name)}" class="btn-primary" target="_blank">💬 WhatsApp Us Now</a>
     <a href="tel:${p.phone.replace(/\s+/g,'')}" class="btn-secondary">📞 ${p.phone}</a>
   </div>
 </section>
@@ -423,7 +446,7 @@ footer{background:${p.palette.primary === '#f5f0eb' || p.palette.primary === '#f
       <div class="footer-title">Contact</div>
       <ul class="footer-links">
         <li><a href="tel:${p.phone.replace(/\s+/g,'')}">${p.phone}</a></li>
-        <li><a href="https://wa.me/919876543210" target="_blank">WhatsApp</a></li>
+        <li><a href="https://wa.me/919321027740" target="_blank">WhatsApp</a></li>
         <li><a href="#services">Our Services</a></li>
         <li><a href="#why-us">About Us</a></li>
       </ul>
@@ -435,7 +458,7 @@ footer{background:${p.palette.primary === '#f5f0eb' || p.palette.primary === '#f
   </div>
 </footer>
 
-<a class="wa-fab" href="https://wa.me/919876543210?text=Hi! I want to know more about ${encodeURIComponent(name)}" target="_blank" aria-label="WhatsApp">
+<a class="wa-fab" href="https://wa.me/919321027740?text=Hi! I want to know more about ${encodeURIComponent(name)}" target="_blank" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -452,6 +475,64 @@ document.querySelectorAll('.service-card,.why-card,.testi-card').forEach(el=>obs
 </script>
 </body>
 </html>`;
+}
+
+
+// Real Unsplash images per category (curated, stable URLs)
+function getImages(bizType) {
+  const imgs = {
+    "dental clinic": {
+      hero: "https://images.unsplash.com/photo-1588776814546-1ffedcdc1f40?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80"
+    },
+    "law firm": {
+      hero: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&q=80"
+    },
+    "fitness coach": {
+      hero: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=400&q=80"
+    },
+    "restaurant": {
+      hero: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=400&q=80"
+    },
+    "software agency": {
+      hero: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
+    },
+    "real estate agency": {
+      hero: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+    },
+    "yoga studio": {
+      hero: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1599447421416-3414500d18a5?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80"
+    },
+    "photography studio": {
+      hero: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=400&q=80"
+    },
+    "coaching institute": {
+      hero: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1434030216411-0b793f4b6f7d?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=400&q=80"
+    },
+    "beauty salon": {
+      hero: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80",
+      service: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
+      team: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=80"
+    }
+  };
+  return imgs[bizType] || imgs["software agency"];
 }
 
 function adjustColor(hex) {
