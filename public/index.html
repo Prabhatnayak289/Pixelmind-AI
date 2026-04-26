@@ -96,14 +96,14 @@ nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.3)}
 
 /* SECTION TRANSITION — eliminates blank gap */
 .section-break{
-  height:100px;
+  height:40px;
   background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
   position:relative;overflow:hidden
 }
 .section-break::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 100% at 50% 100%,rgba(66,133,244,.07) 0%,transparent 70%)}
 
 /* DEMO SECTION */
-.demo-section{padding:80px 24px 100px;background:var(--bg2);position:relative;overflow:hidden}
+.demo-section{padding:48px 24px 72px;background:var(--bg2);position:relative;overflow:hidden}
 .demo-section::before{content:'';position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(ellipse 55% 50% at 8% 50%,rgba(66,133,244,.12) 0%,transparent 60%),
              radial-gradient(ellipse 45% 55% at 92% 50%,rgba(167,139,250,.1) 0%,transparent 60%)}
@@ -116,7 +116,7 @@ nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.3)}
 .demo-card{background:var(--card-bg);border:1px solid var(--border);border-radius:22px;padding:36px;backdrop-filter:blur(24px);box-shadow:0 0 0 1px var(--border2),0 32px 80px rgba(0,0,0,.4),0 0 60px rgba(66,133,244,.05)}
 .demo-inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 .inp-group{display:flex;flex-direction:column;gap:7px}
-.inp-label{font-size:.66rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text3)}
+.inp-label{font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text);opacity:.9}
 .inp-group select,.inp-group input,.inp-group textarea{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:'Google Sans',sans-serif;font-size:.9rem;outline:none;transition:border .2s,box-shadow .2s;width:100%}
 .inp-group select:focus,.inp-group input:focus,.inp-group textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(66,133,244,.18)}
 .inp-group select option{background:var(--bg2)}
@@ -200,7 +200,7 @@ nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.3)}
 .preview-ver{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.65);color:white;font-size:.7rem;padding:3px 10px;border-radius:50px;backdrop-filter:blur(8px);z-index:10}
 
 /* SERVICES */
-.section{padding:100px 24px}
+.section{padding:72px 24px}
 .section-inner{max-width:1100px;margin:0 auto}
 .section-title{font-family:'Google Sans Display',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;letter-spacing:-.8px;line-height:1.15;max-width:520px;margin-bottom:52px}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -216,7 +216,7 @@ nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.3)}
 .svc-price span{font-size:.75rem;font-weight:400;color:var(--text3)}
 
 /* PROCESS */
-.process-section{background:var(--bg2);padding:100px 24px}
+.process-section{background:var(--bg2);padding:72px 24px}
 .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;position:relative}
 .process-steps::before{content:'';position:absolute;top:21px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,rgba(66,133,244,.4),rgba(167,139,250,.4),transparent)}
 .p-step{text-align:center;padding:0 12px;position:relative;z-index:1}
@@ -258,7 +258,7 @@ nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.3)}
 .plan-btn:hover{background:var(--blue);border-color:var(--blue);color:white}
 
 /* CTA */
-.cta-section{padding:120px 24px;text-align:center;position:relative;overflow:hidden;background:var(--bg2)}
+.cta-section{padding:72px 24px;text-align:center;position:relative;overflow:hidden;background:var(--bg2)}
 .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 50%,rgba(66,133,244,.1) 0%,transparent 65%);pointer-events:none}
 .cta-section h2{font-family:'Google Sans Display',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.8px;max-width:600px;margin:0 auto 16px;position:relative;z-index:1}
 .cta-section p{color:var(--text2);max-width:420px;margin:0 auto 40px;line-height:1.78;position:relative;z-index:1}
@@ -302,7 +302,90 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
   .process-steps{grid-template-columns:1fr}.section-break{height:60px}
   .editor-hdr-btns{flex-wrap:wrap;gap:4px}
 }
-::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:rgba(66,133,244,.4);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:rgba(66,133,244,.7)}
+html{scrollbar-width:thin;scrollbar-color:rgba(66,133,244,.4) var(--bg)}
+html{scroll-behavior:smooth}
+
+/* ── NEON ANIMATED BORDER — Live AI Demo section ── */
+.demo-section{position:relative}
+.demo-section-border{
+  position:absolute;inset:0;pointer-events:none;z-index:0;
+  border-radius:0;overflow:hidden;
+}
+.demo-section-border::before{
+  content:'';
+  position:absolute;
+  inset:-2px;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(66,133,244,0) 20%,
+    rgba(66,133,244,.7) 35%,
+    rgba(167,139,250,.9) 50%,
+    rgba(6,182,212,.7) 65%,
+    rgba(66,133,244,0) 80%,
+    transparent 100%
+  );
+  background-size:200% 100%;
+  animation:neonSlide 3s linear infinite;
+  mask-image:linear-gradient(180deg,#000 0%,#000 2px,transparent 2px,transparent calc(100% - 2px),#000 calc(100% - 2px),#000 100%);
+}
+@keyframes neonSlide{
+  0%{background-position:200% 0}
+  100%{background-position:-200% 0}
+}
+
+/* ── HIGHLIGHT TEXT — catch attention ── */
+.highlight-text{
+  display:inline-block;
+  color:var(--text2);
+  font-size:.95rem;
+  line-height:1.75;
+  margin-bottom:40px;
+  max-width:460px;
+  padding:10px 18px;
+  border-radius:12px;
+  background:rgba(66,133,244,.07);
+  border:1px solid rgba(66,133,244,.25);
+  box-shadow:0 0 20px rgba(66,133,244,.12),inset 0 0 20px rgba(66,133,244,.04);
+  animation:glowPulse 3s ease-in-out infinite;
+}
+@keyframes glowPulse{
+  0%,100%{box-shadow:0 0 20px rgba(66,133,244,.12),inset 0 0 20px rgba(66,133,244,.04);border-color:rgba(66,133,244,.25)}
+  50%{box-shadow:0 0 32px rgba(66,133,244,.28),inset 0 0 28px rgba(66,133,244,.08);border-color:rgba(66,133,244,.5)}
+}
+
+/* ── NEON BORDER CARD for demo-card ── */
+.demo-card{position:relative}
+.demo-card::before{
+  content:'';
+  position:absolute;
+  inset:-1px;
+  border-radius:23px;
+  background:linear-gradient(135deg,
+    rgba(66,133,244,.6),
+    rgba(167,139,250,.4),
+    rgba(6,182,212,.6),
+    rgba(66,133,244,.6)
+  );
+  background-size:300% 300%;
+  animation:cardBorderRotate 4s linear infinite;
+  z-index:-1;
+  opacity:.6;
+}
+.demo-card:hover::before{opacity:1}
+@keyframes cardBorderRotate{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* ── SMOOTH SCROLL FIX ── */
+*{scroll-behavior:smooth}
+html{overflow-y:scroll}
+body{overflow-x:hidden}
 </style>
 </head>
 <body>
@@ -321,7 +404,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
   </div>
   <div class="nav-right">
     <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
-    <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20a%20website%20for%20my%20business" class="nav-cta" target="_blank">Get a Free Quote</a>
+    <a href="https://wa.me/919321027740?text=Hi!%20I%20want%20a%20website%20for%20my%20business" class="nav-cta" target="_blank">Get a Free Quote</a>
     <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -333,7 +416,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
   <a href="#services" onclick="toggleMenu()">Services</a>
   <a href="#pricing" onclick="toggleMenu()">Pricing</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
-  <a href="https://wa.me/919876543210" target="_blank" style="color:var(--green)">💬 WhatsApp</a>
+  <a href="https://wa.me/919321027740" target="_blank" style="color:var(--green)">💬 WhatsApp</a>
 </div>
 
 <!-- HERO -->
@@ -347,7 +430,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
   <p class="hero-sub">We design, build &amp; optimize high-converting websites for clinics, coaches, law firms &amp; local businesses — powered by AI, refined by experts.</p>
   <div class="hero-actions">
     <button class="btn-primary" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">⚡ Generate My Website</button>
-    <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20a%20website" class="btn-outline" target="_blank">💬 WhatsApp Us</a>
+    <a href="https://wa.me/919321027740?text=Hi!%20I%20want%20a%20website" class="btn-outline" target="_blank">💬 WhatsApp Us</a>
   </div>
   <div class="hero-stats">
     <div class="stat"><div class="stat-num">48hr</div><div class="stat-label">Avg. delivery</div></div>
@@ -372,16 +455,17 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
 
 <!-- DEMO SECTION -->
 <section class="demo-section" id="demo">
+  <div class="demo-section-border"></div>
   <div class="demo-inner">
     <div class="section-chip reveal">🤖 Live AI Demo</div>
-    <h2 class="demo-h2 reveal">Generate a landing page — right now.</h2>
-    <p class="demo-p reveal">Pick your business type, enter your name, and watch AI build a complete website in seconds.</p>
+    <h2 class="demo-h2 reveal">Generate your sample landing page — right now.</h2>
+    <p class="highlight-text reveal">✦ Pick your business type, enter your name, and watch AI build a complete website in seconds.</p>
 
     <div class="demo-card reveal-scale">
       <!-- INPUTS -->
       <div class="demo-inputs">
         <div class="inp-group">
-          <label class="inp-label">Business Type</label>
+          <label class="inp-label">Select Your Business Type</label>
           <select id="bizType" onchange="onBizTypeChange()">
             <option value="dental clinic">🦷 Dental Clinic</option>
             <option value="law firm">⚖️ Law Firm</option>
@@ -396,7 +480,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
           </select>
         </div>
         <div class="inp-group">
-          <label class="inp-label">Business Name</label>
+          <label class="inp-label">Provide Your Business Name</label>
           <input type="text" id="bizName" placeholder="Auto-filled on category change" value="SmileCare Dental Clinic">
         </div>
       </div>
@@ -444,7 +528,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
               <div class="book-feat">3 rounds of revisions</div><div class="book-feat">6 months free hosting</div>
               <div class="book-feat">SEO-optimized pages</div><div class="book-feat">Delivered in 48 hours</div>
             </div>
-            <a href="https://wa.me/919876543210?text=Hi!%20I%20tried%20WebClaw%20and%20want%20a%20full%20website." class="btn-primary" target="_blank" style="text-decoration:none;display:inline-flex;">💬 WhatsApp to Get Started</a>
+            <a href="https://wa.me/919321027740?text=Hi!%20I%20tried%20WebClaw%20and%20want%20a%20full%20website." class="btn-primary" target="_blank" style="text-decoration:none;display:inline-flex;">💬 WhatsApp to Get Started</a>
           </div>
         </div>
       </div>
@@ -560,9 +644,9 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
     <div class="section-chip reveal">Transparent Pricing</div>
     <h2 class="section-title reveal">No hidden costs. Ever.</h2>
     <div class="pricing-grid">
-      <div class="price-card reveal"><div class="plan-name">Starter</div><div class="plan-desc">Solo professionals</div><div class="plan-price">₹9,999</div><div class="plan-cycle">one-time payment</div><ul class="plan-features"><li>1-Page Landing Page</li><li>Mobile Responsive</li><li>WhatsApp + Contact Form</li><li>Basic On-Page SEO</li><li>3 Revisions</li><li>6-Month Free Hosting</li></ul><button class="plan-btn" onclick="window.open('https://wa.me/919876543210?text=Starter plan','_blank')">Get Started</button></div>
-      <div class="price-card featured reveal" style="transition-delay:.1s"><div class="plan-badge">Most Popular</div><div class="plan-name">Growth</div><div class="plan-desc">Growing businesses</div><div class="plan-price">₹24,999</div><div class="plan-cycle">one-time + ₹2,999/mo</div><ul class="plan-features"><li>5-Page Full Website</li><li>Custom AI Design</li><li>Blog + CMS Included</li><li>Google Analytics Setup</li><li>Monthly SEO Report</li><li>Priority Support</li></ul><button class="plan-btn" onclick="window.open('https://wa.me/919876543210?text=Growth plan','_blank')">Get Started</button></div>
-      <div class="price-card reveal" style="transition-delay:.2s"><div class="plan-name">Pro</div><div class="plan-desc">Scaling fast</div><div class="plan-price">₹49,999</div><div class="plan-cycle">one-time + ₹5,999/mo</div><ul class="plan-features"><li>7-Page Website + Dashboard</li><li>AI Chatbot Integration</li><li>CRM Integration</li><li>Monthly CRO Audit</li><li>A/B Testing Setup</li><li>Dedicated Account Manager</li></ul><button class="plan-btn" onclick="window.open('https://wa.me/919876543210?text=Pro plan','_blank')">Get Started</button></div>
+      <div class="price-card reveal"><div class="plan-name">Starter</div><div class="plan-desc">Solo professionals</div><div class="plan-price">₹9,999</div><div class="plan-cycle">one-time payment</div><ul class="plan-features"><li>1-Page Landing Page</li><li>Mobile Responsive</li><li>WhatsApp + Contact Form</li><li>Basic On-Page SEO</li><li>3 Revisions</li><li>6-Month Free Hosting</li></ul><button class="plan-btn" onclick="window.open('https://wa.me/919321027740?text=Starter plan','_blank')">Get Started</button></div>
+      <div class="price-card featured reveal" style="transition-delay:.1s"><div class="plan-badge">Most Popular</div><div class="plan-name">Growth</div><div class="plan-desc">Growing businesses</div><div class="plan-price">₹24,999</div><div class="plan-cycle">one-time + ₹2,999/mo</div><ul class="plan-features"><li>5-Page Full Website</li><li>Custom AI Design</li><li>Blog + CMS Included</li><li>Google Analytics Setup</li><li>Monthly SEO Report</li><li>Priority Support</li></ul><button class="plan-btn" onclick="window.open('https://wa.me/919321027740?text=Growth plan','_blank')">Get Started</button></div>
+      <div class="price-card reveal" style="transition-delay:.2s"><div class="plan-name">Pro</div><div class="plan-desc">Scaling fast</div><div class="plan-price">₹49,999</div><div class="plan-cycle">one-time + ₹5,999/mo</div><ul class="plan-features"><li>7-Page Website + Dashboard</li><li>AI Chatbot Integration</li><li>CRM Integration</li><li>Monthly CRO Audit</li><li>A/B Testing Setup</li><li>Dedicated Account Manager</li></ul><button class="plan-btn" onclick="window.open('https://wa.me/919321027740?text=Pro plan','_blank')">Get Started</button></div>
     </div>
   </div>
 </section>
@@ -572,8 +656,8 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
   <h2 class="reveal">Get your website live in 48 hours.</h2>
   <p class="reveal">Join 100+ local businesses across Kolkata that trust WebClaw to build and grow their online presence.</p>
   <div class="cta-btns reveal">
-    <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20a%20website." class="btn-primary" target="_blank">💬 WhatsApp Us Now</a>
-    <a href="mailto:hello@webclaw.in" class="btn-outline">✉️ Send an Email</a>
+    <a href="https://wa.me/919321027740?text=Hi!%20I%20want%20a%20website." class="btn-primary" target="_blank">💬 WhatsApp Us Now</a>
+    <a href="mailto:prabhat3.nayak@gmail.com" class="btn-outline">✉️ Send an Email</a>
   </div>
 </section>
 
@@ -583,15 +667,15 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:40px 24p
     <a class="footer-logo" href="#"><div class="nav-logo-icon" style="width:28px;height:28px;font-size:.8rem;">W</div>WebClaw</a>
     <div class="footer-links">
       <a href="#demo">Demo</a><a href="#services">Services</a><a href="#pricing">Pricing</a>
-      <a href="https://wa.me/919876543210" target="_blank">WhatsApp</a>
-      <a href="mailto:hello@webclaw.in">Email</a>
+      <a href="https://wa.me/919321027740" target="_blank">WhatsApp</a>
+      <a href="mailto:prabhat3.nayak@gmail.com">Email</a>
     </div>
     <div class="footer-copy">© 2026 WebClaw — AI Website Studio, Kolkata</div>
   </div>
 </footer>
 
 <!-- WHATSAPP FAB -->
-<a class="wa-float" href="https://wa.me/919876543210?text=Hi!" target="_blank" aria-label="WhatsApp">
+<a class="wa-float" href="https://wa.me/919321027740?text=Hi!" target="_blank" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -718,8 +802,8 @@ function addThinking(){
   const d=document.createElement('div');
   d.className='cmsg cmsg-ai thinking';d.id='thinkMsg';
   let dots=1;
-  d.textContent='✦ Editing';
-  d._iv=setInterval(()=>{dots=(dots%3)+1;d.textContent='✦ Editing'+'.'.repeat(dots);},400);
+  d.textContent='✦ AI is editing your website...';
+  d._iv=setInterval(()=>{dots=(dots%3)+1;d.textContent='✦ AI is editing your website'+'.'.repeat(dots)+' (10-30 sec)';},400);
   c.appendChild(d);c.scrollTop=c.scrollHeight;
 }
 function removeThinking(){
@@ -752,7 +836,8 @@ async function sendEdit(){
     removeThinking();
     if(!res.ok||data.error){
       htmlHistory.pop();
-      addMsg('ai','⚠️ '+(data.error||'Edit failed. Please try again.'));
+      addMsg('ai','⚠️ '+(data.error||'Edit failed.')+
+        '\n\nTips:\n• Try simpler instructions like "change color to blue"\n• For phone: just type the 10-digit number\n• For text: say exactly what to change\n• If it keeps failing, try downloading and editing the code manually.');
       return;
     }
     generatedHTML=data.html;
@@ -762,7 +847,7 @@ async function sendEdit(){
     addMsg('ai','✅ Done! Check the preview on the right. Want any other changes?');
   }catch(err){
     removeThinking();htmlHistory.pop();
-    addMsg('ai','⚠️ Connection error. Please try again.');
+    addMsg('ai','⚠️ Connection issue. Check internet or try a simpler instruction.\n\nQuick fixes work best — try: "change primary color to green" or just type a phone number like 9876500000');
   }finally{
     document.getElementById('chatSend').disabled=false;
     document.getElementById('prevLoading').classList.add('hidden');
