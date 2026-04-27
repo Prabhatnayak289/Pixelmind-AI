@@ -564,12 +564,12 @@ body{overflow-x:hidden}
             </div>
             <div class="chat-bottom">
               <div class="suggestions">
-                <span class="sug" onclick="useSug(this)">Change colour theme</span>
-                <span class="sug" onclick="useSug(this)">Update phone number</span>
-                <span class="sug" onclick="useSug(this)">Add FAQ section</span>
-                <span class="sug" onclick="useSug(this)">Change business name</span>
-                <span class="sug" onclick="useSug(this)">Update pricing</span>
-                <span class="sug" onclick="useSug(this)">Add team member</span>
+                <span class="sug" onclick="useSug(this)">Change color to dark green</span>
+                <span class="sug" onclick="useSug(this)">Change color to navy blue</span>
+                <span class="sug" onclick="useSug(this)">Change color to red</span>
+                <span class="sug" onclick="useSug(this)">Change accent to gold</span>
+                <span class="sug" onclick="useSug(this)">Make fonts bigger</span>
+                <span class="sug" onclick="useSug(this)">Remove gallery section</span>
               </div>
               <div class="chat-row">
                 <textarea class="chat-ta" id="chatInput" placeholder="e.g. Change primary color to dark green…" onkeydown="chatKey(event)" rows="1"></textarea>
@@ -802,8 +802,8 @@ function addThinking(){
   const d=document.createElement('div');
   d.className='cmsg cmsg-ai thinking';d.id='thinkMsg';
   let dots=1;
-  d.textContent='✦ AI is editing your website...';
-  d._iv=setInterval(()=>{dots=(dots%3)+1;d.textContent='✦ AI is editing your website'+'.'.repeat(dots)+' (10-30 sec)';},400);
+  d.textContent='✦ Editing...';
+  d._iv=setInterval(()=>{dots=(dots%3)+1;d.textContent='✦ Editing'+'.'.repeat(dots+1);},500);
   c.appendChild(d);c.scrollTop=c.scrollHeight;
 }
 function removeThinking(){
@@ -822,7 +822,6 @@ async function sendEdit(){
   addThinking();
   document.getElementById('prevLoading').classList.remove('hidden');
 
-  // Save for undo
   htmlHistory.push(generatedHTML);
   if(htmlHistory.length>10)htmlHistory.shift();
 
@@ -830,24 +829,37 @@ async function sendEdit(){
     const res=await fetch('/api/edit',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({html:generatedHTML,instruction,history:chatHistory.slice(-6)})
+      body:JSON.stringify({html:generatedHTML,instruction})
     });
-    const data=await res.json();
+
+    // Safely parse — Vercel timeout returns HTML not JSON
+    const rawText=await res.text();
+    let data;
+    try{ data=JSON.parse(rawText); }
+    catch(e){
+      removeThinking();
+      htmlHistory.pop();
+      addMsg('ai','⚠️ Server took too long to respond.\n\nThese work INSTANTLY without AI:\n📱 Phone: just type 10 digits e.g. 9321027740\n📧 Email: just type e.g. you@gmail.com\n🎨 Color: "change color to dark green"\n🔤 Font: "make fonts bigger"');
+      return;
+    }
+
     removeThinking();
     if(!res.ok||data.error){
       htmlHistory.pop();
-      addMsg('ai','⚠️ '+(data.error||'Edit failed.')+
-        '\n\nTips:\n• Try simpler instructions like "change color to blue"\n• For phone: just type the 10-digit number\n• For text: say exactly what to change\n• If it keeps failing, try downloading and editing the code manually.');
+      addMsg('ai','⚠️ '+(data.error||'Edit failed.'));
       return;
     }
+
     generatedHTML=data.html;
     editVersion++;
     refreshEditorPreview();
     document.getElementById('codeOutput').textContent=generatedHTML;
-    addMsg('ai','✅ Done! Check the preview on the right. Want any other changes?');
+    addMsg('ai','✅ Done! Check the live preview →');
+
   }catch(err){
-    removeThinking();htmlHistory.pop();
-    addMsg('ai','⚠️ Connection issue. Check internet or try a simpler instruction.\n\nQuick fixes work best — try: "change primary color to green" or just type a phone number like 9876500000');
+    removeThinking();
+    if(htmlHistory.length)htmlHistory.pop();
+    addMsg('ai','⚠️ Network error: '+(err.message||'unknown')+'\n\nInstant fixes (no AI needed):\n📱 Just type a phone number: 9321027740\n🎨 Type: change color to green\n📧 Type your email address');
   }finally{
     document.getElementById('chatSend').disabled=false;
     document.getElementById('prevLoading').classList.add('hidden');
@@ -869,7 +881,7 @@ async function generateWebsite(){
   document.getElementById('editorWrap').classList.remove('visible');
   document.getElementById('chatMsgs').innerHTML=
     '<div class="cmsg cmsg-sys">✨ Website generated! Tell me what to change.</div>'+
-    '<div class="cmsg cmsg-ai">Hi! I can change colours, text, sections, pricing, phone numbers — anything. Use the quick options below or type your own instruction.</div>';
+    '<div class="cmsg cmsg-ai">Hi! Here's what works instantly:<br><br>📱 <b>Phone:</b> Just type the 10 digits — e.g. <i>9321027740</i><br>📧 <b>Email:</b> Just type it — e.g. <i>you@gmail.com</i><br>🎨 <b>Color:</b> e.g. <i>change color to dark green</i><br>🔤 <b>Font size:</b> <i>make fonts bigger</i><br><br>Use the quick buttons below or type your own.</div>';
 
   try{
     const res=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({bizType,bizName,bizDesc})});
